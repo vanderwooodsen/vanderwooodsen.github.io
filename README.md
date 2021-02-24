@@ -1,2 +1,1 @@
-# vanderwooodsen.github.io
-my web page
+# Hi, I'm Christi!
