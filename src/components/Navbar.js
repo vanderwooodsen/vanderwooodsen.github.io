@@ -1,74 +1,57 @@
 import React from 'react';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-import { white } from 'material-ui/styles/colors';
-
-const useStyles = makeStyles({
-  list: {
-    width: '250',
-    height: '100%'
-  },
-  fullList: {
-    backgroundColor: '#171717',
-    width: 'auto',
-    height: '100%'
-  },
-  wholePage:{
-    backgroundColor: '#171717',
-  },
-  typography:{
-    color: '#bfc0c0'
-  },
-  button:{
-    color: '#fff'
-  }
-});
+import { FaTwitter, FaBehanceSquare, FaGithub, FaLinkedin, FaInstagramSquare, FaHome} from 'react-icons/fa';
+import HiHome from 'react-icons'
 
 export default function NavBar() {
-  const classes = useStyles();
-  const [state, setState] = React.useState(false);
-
-  const toggleDrawer = (anchor, open) => (event) => {
-
-    setState({ ...state, [anchor]: open });
-  };
-
-  const list = (anchor) => (
-    <div
-      className={clsx(classes.list, {
-        [classes.fullList]: state,
-      })}>
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text} className={clsx(classes.typography)}>
-            <ListItemIcon className={clsx(classes.typography)}>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  );
 
   return (
-    <div className={clsx(classes.wholePage)}>
-      {['right'].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)} className={clsx(classes.button)}>Menu</Button>
-          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-            {list(anchor)}
-          </Drawer>
-        </React.Fragment>
-      ))}
-    </div>
+       <nav id="navbar" className="fixed w-full z-10 top-0 bg-gray-800 ">
+         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+            <div className="pl-4 flex items-center">
+            </div>
+            <div className="block lg:hidden pr-4">
+               <button id="nav-toggle" className="flex items-center px-3 py-2 border rounded text-gray-50 border-blue-300 hover:text-gray-300 hover:border-blue-300 appearance-none focus:outline-none">
+                  <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" >
+                     <title>Menu</title>
+                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                  </svg>
+               </button>
+            </div>
+            <div className="w-full flex-grow lg:flex  lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20" id="nav-content">
+               <div className="flex-1 w-full mx-auto max-w-sm content-center py-4 lg:py-0">
+                <ul className="list-reset lg:flex justify-end items-center">
+                    <li className="mr-3 py-2 lg:py-0">
+                      <a className="inline-block py-2 px-4 text-gray-50 hover:text-blue-500 font-bold no-underline" href="//www.linkedin.com/in/christidev/"><FaLinkedin/></a>
+                    </li>
+                    <li className="mr-3 py-2 lg:py-0">
+                      <a className="inline-block text-gray-50 hover:text-gray-500 hover:underline py-2 px-4" href="//github.com/vanderwooodsen"><FaGithub/></a>
+                    </li>
+                    <li className="mr-3 py-2 lg:py-0">
+                      <a className="inline-block text-gray-50 hover:text-yellow-500 hover:underline py-2 px-4" href="//www.behance.net/christine_tsiupa"><FaBehanceSquare/></a>
+                    </li>
+                    <li className="mr-3 py-2 lg:py-0">
+                      <a className="inline-block text-gray-50 hover:text-blue-400 hover:underline py-2 px-4" href="//twitter.com/christicodes"><FaTwitter/></a>
+                    </li>
+                    <li className="mr-3 py-2 lg:py-0">
+                      <a className="inline-block text-gray-50 hover:text-pink-500 hover:underline py-2 px-4" href="//www.instagram.com/christis_creations_/"><FaInstagramSquare/></a>
+                    </li>
+                </ul>
+               </div>
+               <ul className="list-reset lg:flex justify-end items-center">
+                  <li className="mr-3 py-2 lg:py-0">
+                     <a className="inline-block py-2 px-4 text-gray-50 hover:text-gray-500 no-underline" href="#"><FaHome/></a>
+                  </li>
+                  <li className="mr-3 py-2 lg:py-0">
+                     <a className="inline-block text-gray-50 no-underline hover:text-gray-500  py-2 px-4" href="./AboutMe.js">About me</a>
+                  </li>
+                  <li className="mr-3 py-2 lg:py-0">
+                     <a className="inline-block text-gray-50 no-underline hover:text-gray-500 py-2 px-4" href="./Skills.js">Skills</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
   );
 }
 

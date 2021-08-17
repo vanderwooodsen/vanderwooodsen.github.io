@@ -1,29 +1,35 @@
 import React, { Component } from 'react';
-import { withStyles } from "@material-ui/core/styles";
-import {Box} from "@material-ui/core"
-import NavBar from './Navbar';
+import Skills from './Skills.js';
+import AboutMe from './AboutMe';
 
-const navStyles = (theme) => ({
-  root: {
-    flexGrow: 1,
-    boxShadow: "none",
-    background: '#181818',
-  },
 
-});
 
 class Home extends Component{
   render(){
-    const classes = this.props.classes;
     return(
-      <div className={classes.root}>
-        <Box position="absolute" right="12%">
-          <NavBar/>
-        </Box>
-        Hello world!
+      <div id="home_page" className="container flex">
+        <div className="box">
+          <div className="flex flex-col">
+                <img src="/myPhoto.jpg" className="rounded-full w-28 mx-auto"/>
+                <p className="text-3xl my-6 text-center">
+                    Hi, I&#x27;m Christine 🤘
+                </p>
+                <h2 className="max-w-3xl text-5xl md:text-6xl font-bold mx-auto text-gray-800 text-center py-2">
+                    Building digital products, brands, and experiences.
+                </h2>
+                <div>
+                  <AboutMe/>
+                </div>
+                <div className="flex justify-center">
+                  <Skills/>
+                </div>
+            </div>
+
+
+        </div>
       </div>
     )
   }
 }
 
-export default withStyles(navStyles, { withTheme: true })(Home);
+export default Home;

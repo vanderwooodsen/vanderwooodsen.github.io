@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import '../node_modules/devicon/devicon.min.css';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +17,82 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#skills{
+  font-family: 'Inter', sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  color:rgb(249, 249, 249);
+  text-shadow: 1px 1px #000000;
+  padding-top: 2%;
+}
+
+#body_skills{
+  margin-top: 5%;
+  background-color: #2b354acb;
+  box-shadow: 1px 2px #15161c;
+
+}
+/*
+#devider{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #d82866;
+  bottom: 0;
+  left: 0;
+}
+*/
+
+.icons{
+  font-size: 5rem;
+  padding: 1%;
+}
+
+.icons>div {
+  text-align: center;
+
+}
+
+.icons i {
+  display: inline-block;
+}
+
+#express{
+  font-size: 7rem
+}
+
+#sequel{
+  font-size: 7rem;
+}
+#node{
+  font-size: 7rem;
+}
+
+.sizing{
+  font-size: 6rem;
+}
+
+#mocha{
+  color:rgb(143, 75, 50);
+}
+
+#postgres{
+  color:rgb(34, 135, 172)
+}
+
+#mysql{
+  color:rgb(31, 121, 199)
+}
+
+#xd{
+color:rgb(210, 46, 109);
+}
+
+#home_page{
+  padding-top: 4%;
+  padding-bottom: 3%;
+}
+
