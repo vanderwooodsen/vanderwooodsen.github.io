@@ -9,7 +9,7 @@ class Skills extends Component {
     return(
       <div id="body_skills" className="box-border md:box-content ...  ">
         <div className="flex justify-center ...">
-          <span  id="skills" >Tehnical skills</span>
+          <article  id="skills" >Tehnical skills</article>
         </div>
 
 

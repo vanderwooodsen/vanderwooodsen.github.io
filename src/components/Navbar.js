@@ -1,7 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import { FaTwitter, FaBehanceSquare, FaGithub, FaLinkedin, FaInstagramSquare, FaHome} from 'react-icons/fa';
-import HiHome from 'react-icons'
 
 export default function NavBar() {
 
@@ -40,7 +39,7 @@ export default function NavBar() {
                </div>
                <ul className="list-reset lg:flex justify-end items-center">
                   <li className="mr-3 py-2 lg:py-0">
-                     <a className="inline-block py-2 px-4 text-gray-50 hover:text-gray-500 no-underline" href="#"><FaHome/></a>
+                     <a className="inline-block py-2 px-4 text-gray-50 hover:text-gray-500 no-underline" href="./Home.js"><FaHome/></a>
                   </li>
                   <li className="mr-3 py-2 lg:py-0">
                      <a className="inline-block text-gray-50 no-underline hover:text-gray-500  py-2 px-4" href="./AboutMe.js">About me</a>
