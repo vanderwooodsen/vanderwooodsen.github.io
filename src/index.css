@@ -3,6 +3,8 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import '../node_modules/devicon/devicon.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
 
 body {
   margin: 0;
@@ -18,7 +20,7 @@ code {
     monospace;
 }
 
-#skills{
+.skills{
   font-family: 'Inter', sans-serif;
   font-size: 38px;
   font-weight: bold;
@@ -84,7 +86,7 @@ code {
 }
 
 #mysql{
-  color:rgb(31, 121, 199)
+  color:rgb(31, 121, 199);
 }
 
 #xd{
@@ -98,7 +100,7 @@ color:rgb(210, 46, 109);
 
 #about_me{
   background-color:white;
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 
@@ -110,4 +112,46 @@ color:rgb(210, 46, 109);
 
 #aboutMe_body{
  margin-left: 3%;
+ color: #112f5c;
+}
+
+#aboutMe_header{
+  font-family: 'Fira Code', monospace;
+  color: #13315c;
+}
+
+.bgTimeline{
+  background-color:rgb(232, 34, 110);
+}
+
+.timelineTXT{
+  background-color:#364055cb;
+  border-color:rgb(232, 34, 110);
+
+}
+
+.descOfProj{
+  color:rgb(66, 167, 198);
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.githubBtn2{
+  color:rgb(223, 45, 113);
+}
+
+.githubBtn2:hover{
+  color:rgb(126, 29, 66);
+  cursor: pointer
+}
+
+.githubBtn{
+  color:rgb(184, 183, 183);
+}
+.githubBtn:hover{
+  color:rgb(19, 96, 143);
+  cursor: pointer
+}
+
+#projectsBtn{
+  padding-right: 68%;
 }

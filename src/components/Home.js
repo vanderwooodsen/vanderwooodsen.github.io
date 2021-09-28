@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Skills from './Skills.js';
 import AboutMe from './AboutMe';
+import Projects from './Projects'
+
 
 
 
@@ -12,6 +14,9 @@ class Home extends Component{
                 <AboutMe/>
                 <div className="flex">
                   <Skills/>
+                </div>
+                <div>
+                  <Projects/>
                 </div>
             </div>
     )
