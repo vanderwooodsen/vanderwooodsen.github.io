@@ -131,7 +131,7 @@ color:rgb(210, 46, 109);
 }
 
 .descOfProj{
-  color:rgb(66, 167, 198);
+  color:rgb(72, 187, 222);
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
@@ -140,18 +140,22 @@ color:rgb(210, 46, 109);
 }
 
 .githubBtn2:hover{
-  color:rgb(126, 29, 66);
+  color:rgba(171, 40, 90, 0.673);
   cursor: pointer
 }
 
 .githubBtn{
-  color:rgb(184, 183, 183);
+  color:rgb(148, 204, 233);
 }
 .githubBtn:hover{
-  color:rgb(19, 96, 143);
+  color:rgba(99, 137, 171, 0.762);
   cursor: pointer
 }
 
 #projectsBtn{
   padding-right: 68%;
+}
+
+.aboutProjects{
+color:#6b778c;
 }

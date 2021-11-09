@@ -27,12 +27,17 @@ function  Projects(){
           </div>
           <div className="timelineTXT col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto shadow-md w-full">
             <h3 className="font-medium text-lg mb-1">UNIWEB</h3>
-            <p className="leading-tight text-justify w-full descOfProj font-semibold">
-            React, Redux, Material UI, Chart.JS, D3, Puppetier, Postgresql SQL, Chai
+            <p className="leading-tight text-justify w-full descOfProj font-semibold text-sm">
+            REACT, REDUX, MATERIAL UI, CHART.JS, D3, PUPPETIER, POSTGRES SQL, CHAI
             </p>
-            <div className="clearfix">
-              <a className="float-left githubBtn font-semibold  text-2xl pt-4" href="//github.com/vanderwooodsen/React-Native-Recipes"><FaGithub/><article className="text-base">See repo</article></a>
-              <a  id="projectsBtn" className="float-right githubBtn2 font-semibold  text-2xl pt-4" href="//github.com/vanderwooodsen/React-Native-Recipes"><TiArrowForward/><article className="text-base">See Website</article></a>
+
+              <p className="py-2 aboutProjects">
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+              </p>
+
+            <div className="clearfix grid grid-cols-2 gap-2 md:grid-cols-1 ">
+              <a className="float-left githubBtn font-semibold  text-2xl" href="//github.com/vanderwooodsen/React-Native-Recipes"><FaGithub/><article className="text-base">See repo</article></a>
+              <a  id="projectsBtn" className="float-right githubBtn2 font-semibold  text-2xl" href="//github.com/vanderwooodsen/React-Native-Recipes"><TiArrowForward/><article className="text-base">See Website</article></a>
             </div>
           </div>
         </div>
@@ -49,9 +54,14 @@ function  Projects(){
           </div>
           <div className="timelineTXT col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto shadow-md w-full">
             <h3 className="font-semibold text-lg mb-1">TASTY LIST</h3>
-            <p className="leading-tight text-justify descOfProj font-semibold">
+            <p className="leading-tight text-justify w-full descOfProj font-semibold text-sm">
             REACT NATIVE, REDUX, REACT NATIVE PAPER, EXPO
             </p>
+
+            <p className="py-2 aboutProjects">
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+              </p>
+
             <div className="clearfix">
               <a className="float-left githubBtn font-semibold  text-2xl pt-4" href="//github.com/vanderwooodsen/React-Native-Recipes"><FaGithub/><article className="text-base">See repo</article></a>
               <a  id="projectsBtn" className="float-right githubBtn2 font-semibold  text-2xl pt-4" href="//github.com/vanderwooodsen/React-Native-Recipes"><TiArrowForward/><article className="text-base">More info</article></a>
@@ -70,9 +80,13 @@ function  Projects(){
           </div>
           <div className="timelineTXT col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto shadow-md w-full">
             <h3 className="font-semibold text-lg mb-1 text-gray-50">LEAFLY</h3>
-            <p className="leading-tight text-justify descOfProj font-semibold">
+            <p className="leading-tight text-justify w-full descOfProj font-semibold text-sm">
             REACT, REDUX, BULMA CSS, EXPRESS, POSTGRE SQL, CHAI, HEROKU, TRAVIS CI
             </p>
+
+            <p className="py-2 aboutProjects">
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+              </p>
 
             <div className="clearfix">
               <a className="float-left githubBtn font-semibold  text-2xl pt-4" href="//github.com/vanderwooodsen/React-Native-Recipes"><FaGithub/><article className="text-base">See repo</article></a>

@@ -49,39 +49,3 @@ class Skills extends Component {
 export default Skills;
 
 
-/*
-   <div className="rounded-full py-3 p-2 px-6...">
-            <div className="text-2xl bg-gradient-to-r from-pink-600 via-pink-800 to-pink-900 p-1 pr-3 rounded-r-3xl rounded-l-lg shadow-m text-blue-300">
-              <span><SiReact className="w-7 h-7 align-middle inline-block"/></span>
-              <span className="pl-2">React</span>
-            </div>
-          </div>
-
-          <div className="rounded-full py-3 p-2 px-6...">
-            <div className="text-2xl bg-gradient-to-r from-pink-600 via-pink-800 to-pink-900 p-1 pr-3 rounded-r-3xl rounded-l-lg shadow-m text-blue-300">
-              <span><SiReact className="w-7 h-7 align-middle inline-block"/></span>
-              <span className="pl-2">React</span>
-            </div>
-          </div>
-
-          <div className="rounded-full py-3 p-2 px-6...">
-            <div className="text-2xl bg-gradient-to-r from-pink-600 via-pink-800 to-pink-900 p-1 pr-3 rounded-r-3xl rounded-l-lg shadow-m text-blue-300">
-              <span><SiReact className="w-7 h-7 align-middle inline-block"/></span>
-              <span className="pl-2">React</span>
-            </div>
-          </div>
-
-          <div className="rounded-full py-3 p-2 px-6...">
-            <div className="text-2xl bg-gradient-to-r from-pink-600 via-pink-800 to-pink-900 p-1 pr-3 rounded-r-3xl rounded-l-lg shadow-m text-blue-300">
-              <span><SiReact className="w-7 h-7 align-middle inline-block"/></span>
-              <span className="pl-2">React</span>
-            </div>
-          </div>
-
-          <div className="rounded-full py-3 p-2 px-6...">
-            <div className="text-2xl bg-gradient-to-r from-pink-600 via-pink-800 to-pink-900 p-1 pr-3 rounded-r-3xl rounded-l-lg shadow-m text-blue-300">
-              <span><SiReact className="w-7 h-7 align-middle inline-block"/></span>
-              <span className="pl-2">React</span>
-            </div>
-          </div>
-          */

@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import { FaTwitter, FaBehanceSquare, FaGithub, FaLinkedin, FaInstagramSquare, FaHome} from 'react-icons/fa';
 
 export default function NavBar() {
