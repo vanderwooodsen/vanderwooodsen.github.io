@@ -9,15 +9,11 @@ import Projects from './Projects'
 class Home extends Component{
   render(){
     return(
-      <div id="home_page" className="container mx-auto flex flex-col items-center">
+      <div id="home_page" className="flex flex-col items-center">
 
                 <AboutMe/>
-                <div className="flex">
-                  <Skills/>
-                </div>
-                <div>
-                  <Projects/>
-                </div>
+                <Skills/>
+                <Projects/>
             </div>
     )
   }

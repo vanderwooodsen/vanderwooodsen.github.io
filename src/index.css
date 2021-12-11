@@ -94,8 +94,7 @@ color:rgb(210, 46, 109);
 }
 
 #home_page{
-  padding-top: 4%;
-  padding-bottom: 3%;
+  margin-top: 56px;
 }
 
 #about_me{
@@ -106,12 +105,11 @@ color:rgb(210, 46, 109);
 
 #footer{
   height: 30px;
-  background-color: #364055cb;
+  background-color: #25273acb;
   width: 100%;
 }
 
 #aboutMe_body{
- margin-left: 3%;
  color: #112f5c;
 }
 
@@ -125,7 +123,7 @@ color:rgb(210, 46, 109);
 }
 
 .timelineTXT{
-  background-color:#364055cb;
+  background-color:#2b354acb;
   border-color:rgb(232, 34, 110);
 
 }
@@ -136,11 +134,11 @@ color:rgb(210, 46, 109);
 }
 
 .githubBtn2{
-  color:rgb(223, 45, 113);
+  color:rgb(232, 34, 110);;
 }
 
 .githubBtn2:hover{
-  color:rgba(171, 40, 90, 0.673);
+  color:rgba(7, 6, 6, 0.673);
   cursor: pointer
 }
 
