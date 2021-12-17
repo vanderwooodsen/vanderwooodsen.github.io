@@ -10,7 +10,7 @@ export default function NavBar() {
             <div className="pl-4 flex items-center">
             </div>
             <div className="block lg:hidden pr-4">
-               <button id="nav-toggle" className="flex items-center px-3 py-2 border rounded text-gray-50 border-blue-300 hover:text-gray-300 hover:border-blue-300 appearance-none focus:outline-none">
+               <button id="nav-toggle" className="flex items-center px-3 py-2 border rounded text-gray-50 border-blue-300 hover:text-gray-300 hover:border-blue-400 appearance-none focus:outline-none">
                   <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" >
                      <title>Menu</title>
                      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
@@ -60,16 +60,16 @@ export default function NavBar() {
                </div>
                <ul className="list-reset lg:flex justify-end items-center">
                   <li className="mr-3 py-2 lg:py-0">
-                     <a className="inline-block py-2 px-4 text-gray-50 hover:text-gray-500 no-underline" href="./Home.js"><FaHome/></a>
+                     <a className="navHover inline-block py-2 px-4 text-gray-50 no-underline" href="./Home.js"><FaHome/></a>
                   </li>
                   <li className="mr-3 py-2 lg:py-0">
-                     <a className="inline-block text-gray-50 no-underline hover:text-gray-500  py-2 px-4" href="./AboutMe.js">About me</a>
+                     <a className="inline-block text-gray-50 no-underline navHover py-2 px-4" href="./AboutMe.js">About me</a>
                   </li>
                   <li className="mr-3 py-2 lg:py-0">
-                     <a className="inline-block text-gray-50 no-underline hover:text-gray-500 py-2 px-4" href="./Skills.js">Skills</a>
+                     <a className="inline-block text-gray-50 no-underline navHover py-2 px-4" href="./Skills.js">Skills</a>
                   </li>
                   <li className="mr-3 py-2 lg:py-0">
-                     <a className="inline-block text-gray-50 no-underline hover:text-gray-500 py-2 px-4" href="./Skills.js">Projects</a>
+                     <a className="inline-block text-gray-50 no-underline navHover py-2 px-4" href="./Skills.js">Projects</a>
                   </li>
                </ul>
             </div>

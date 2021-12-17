@@ -89,6 +89,7 @@ code {
   color:rgb(31, 121, 199);
 }
 
+
 #xd{
 color:rgb(210, 46, 109);
 }
@@ -141,12 +142,15 @@ color:rgb(210, 46, 109);
   color:rgba(7, 6, 6, 0.673);
   cursor: pointer
 }
+.navHover:hover{
+  color:rgb(121, 177, 205);
+}
 
 .githubBtn{
   color:rgb(148, 204, 233);
 }
 .githubBtn:hover{
-  color:rgba(99, 137, 171, 0.762);
+  color:rgba(90, 135, 174, 0.762);
   cursor: pointer
 }
 
@@ -156,4 +160,18 @@ color:rgb(210, 46, 109);
 
 .aboutProjects{
 color:#6b778c;
+}
+
+#animation{
+  height:100vh;
+  position: relative;
+  width: 100%;
+}
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

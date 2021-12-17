@@ -6,7 +6,7 @@ function AboutMe() {
     <div id="about_me" className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-10 gap-10">
 
     <h1 id="aboutMe_header" className="text-3xl text-center font-semibold col-span-full">
-     &gt; Hi, I&#x27;m Christine🤍
+     About me a bit🤍
     </h1>
 
     <div className="col-span-1"><img src="./myPhoto.jpg" className="w-full"/></div>
