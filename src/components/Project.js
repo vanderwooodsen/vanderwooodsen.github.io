@@ -2,7 +2,6 @@ import React from 'react';
 import {FaGithub} from 'react-icons/fa';
 import { TiArrowForward } from "react-icons/ti";
 
-
 function Project(props){
 
   return(
@@ -11,7 +10,7 @@ function Project(props){
             <div className="h-full w-6 flex items-center justify-center">
               <div className="h-full w-1 bg-gray-800 bg-opacity-85 pointer
               -events-none"></div>
-            <div className="lg:w-16 h-0.5 bgTimeline absolute lg:left-0"></div>
+            <div className="lg:w-16 h-0.5 bgTimeline absolute lg:left-0"/>
 
             </div>
 
@@ -29,11 +28,16 @@ function Project(props){
                {props.children}
               </p>
 
+
+
             <div className="text-md font-semibold flex-col flex space-y-3 md:flex-row md:space-x-3 md:space-y-0">
-              <a className="githubBtn font-semibold" href={props.githubLink}><FaGithub className="inline h-7 w-7" /> See repo </a>
-              <a className="githubBtn2 " href={props.webLink}><TiArrowForward className="inline h-7 w-7"/>See Website</a>
+              <a className="githubBtn font-semibold" target="_blank" rel="noreferrer" href={props.githubLink}><FaGithub className="inline h-7 w-7" /> See repo</a>
+              { props.webLink &&
+              <a className="githubBtn2" target="_blank" rel="noreferrer" href={props.webLink}><TiArrowForward className="inline h-7 w-7"/>See Website</a>
+              }
             </div>
           </div>
+
         </div>
 
   )

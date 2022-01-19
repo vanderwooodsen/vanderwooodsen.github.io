@@ -1,0 +1,38 @@
+import TypeIt from "typeit-react";
+
+
+
+export default function SecondAnimation() {
+    // const codeRef = useCallback(node => {
+    //   type(node, 'Hello', 1000, 'Hello world!');
+    // }, []);
+
+    return(
+      <div className="absolute top-1/3 lg:ml-36 md:ml-24">
+
+        <header >
+          <p id="secondAnimation" className="md:tracking-tights tracking-tighter md:leading-normal	 leading-normal px-5 text-gray-50 text-2xl md:text-6xl content-center select-none">
+          { <TypeIt id="textAnimation" options={{
+            loop: true,
+            loopDelay: 10000,
+            cursorSpeed: 2000
+          }} getBeforeInit={(instance) => {
+              instance
+                .type("Hi, I'm Christine,<br/>a fullstack")
+                .pause(300)
+                .delete(9)
+                .pause(400)
+                .type("full stack developer!:)"
+
+
+                )
+
+              return instance;
+          }}/> }
+          </p>
+        </header>
+
+
+      </div>
+    )
+  }

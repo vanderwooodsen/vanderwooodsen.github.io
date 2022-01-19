@@ -5,6 +5,10 @@
 @import '../node_modules/devicon/devicon.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
 
 body {
   margin: 0;
@@ -22,60 +26,63 @@ code {
 
 .skills{
   font-family: 'Inter', sans-serif;
-  font-size: 38px;
   font-weight: bold;
   color:rgb(249, 249, 249);
   text-shadow: 1px 1.5px #1b1c1c;
-  padding-top: 2%;
 }
 
 #body_skills{
-  margin-top: 5%;
-  background-color: #2b354acb;
-  box-shadow: 1px 2px #15161c;
+  background-color: rgba(41, 46, 70, 0.632);
+}
 
+#bodyColor{
+  background-color: #010b1d;
 }
-/*
-#devider{
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100px;
-  height: 3px;
-  background: #d82866;
-  bottom: 0;
-  left: 0;
-}
-*/
 
-.icons{
-  font-size: 5rem;
-  padding: 1%;
+#navOverlay {
+  position: fixed;
+  width:100%;
+  height: 100%;
+  z-index: 400;
+  background-color: rgba(0, 0, 0, 0.762);
 }
+
+#mobileNavBody {
+  z-index: 950;
+}
+
 
 .icons>div {
   text-align: center;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 60px;
+}
 
+@media (min-width: 768px) {
+  .icons>div {
+    min-height: 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sizing{
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sizing{
+    font-size: 9rem;
+  }
 }
 
 .icons i {
   display: inline-block;
+  cursor: pointer;
 }
 
-#express{
-  font-size: 7rem
-}
-
-#sequel{
-  font-size: 7rem;
-}
-#node{
-  font-size: 7rem;
-}
-
-.sizing{
-  font-size: 6rem;
-}
 
 #mocha{
   color:rgb(143, 75, 50);
@@ -104,19 +111,14 @@ color:rgb(210, 46, 109);
   width: 100%;
 }
 
-#footer{
-  height: 30px;
-  background-color: #25273acb;
-  width: 100%;
-}
 
 #aboutMe_body{
  color: #112f5c;
 }
 
 #aboutMe_header{
-  font-family: 'Fira Code', monospace;
-  color: #13315c;
+  font-family: 'Inter', sans-serif;
+  color: #06204a;
 }
 
 .bgTimeline{
@@ -124,7 +126,7 @@ color:rgb(210, 46, 109);
 }
 
 .timelineTXT{
-  background-color:#2b354acb;
+  background-color: rgba(41, 46, 70, 0.632);
   border-color:rgb(232, 34, 110);
 
 }
@@ -139,18 +141,31 @@ color:rgb(210, 46, 109);
 }
 
 .githubBtn2:hover{
-  color:rgba(7, 6, 6, 0.673);
+  color:rgb(148, 26, 73);
   cursor: pointer
 }
 .navHover:hover{
   color:rgb(121, 177, 205);
 }
+#navbar{
+  background-color:#050813d2
+}
+#mobileNavBody{
+  background-color:#060a17f1;
+  box-shadow: -6px -6px 8px rgb(0, 0, 0) ;
+}
+
+.mobileMenu:hover{
+background-color:#333f52f3;
+border-color: rgb(121, 177, 205);
+}
+
 
 .githubBtn{
   color:rgb(148, 204, 233);
 }
 .githubBtn:hover{
-  color:rgba(90, 135, 174, 0.762);
+  color:rgba(90, 135, 174, 0.612);
   cursor: pointer
 }
 
@@ -162,16 +177,33 @@ color:rgb(210, 46, 109);
 color:#6b778c;
 }
 
-#animation{
-  height:100vh;
-  position: relative;
-  width: 100%;
-}
 
-#tsparticles {
-  position: absolute;
-  top: 0;
-  left: 0;
+#tsparticles{
   width: 100%;
   height: 100%;
+}
+
+#menuBtn{
+  text-shadow: 2px 2px #227791;
+  background-color:#060a17de;
+  z-index: 850;
+}
+
+#textAnimation{
+  text-shadow: 2px 2px #0d0e17cb;
+}
+
+#secondAnimation{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+#certificate:hover{
+  box-shadow: 0 0 6px #043157;
+}
+.indent {
+  text-indent:1em;
+}
+
+article p {
+  padding-bottom:20px;
 }
