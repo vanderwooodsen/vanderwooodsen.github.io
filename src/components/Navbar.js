@@ -7,31 +7,39 @@ import { IoIosMenu } from "react-icons/io";
 class NavBar extends Component {
    constructor(props) {
       super(props);
+
+      this.body = document.getElementsByTagName('body')[0];
+
       this.state = {
         showComponent: false,
       };
       this._onButtonClick = this._onButtonClick.bind(this);
       this.handleClickAway =this.handleClickAway.bind(this);
+      this.handleLinkClick =this.handleLinkClick.bind(this);
     }
 
     _onButtonClick(event) {
-      //event.stopPropagation();
+      event.stopPropagation();
       this.setState({
         showComponent: true,
       });
+      this.body.classList.add("overflow-hidden");
     }
 
     handleClickAway = (event) => {
-      //event.stopPropagation();
+      event.stopPropagation();
 		this.setState({
          showComponent: false,
       })
+      this.body.classList.remove("overflow-hidden");
 	};
 
    handleLinkClick = (event) => {
 		this.setState({
          showComponent: false,
       })
+
+      this.body.classList.remove("overflow-hidden");
 	};
 
 
@@ -84,11 +92,11 @@ class NavBar extends Component {
                      <li className="mr-3 py-2 lg:py-0">
                         <a className="inline-block text-gray-50 no-underline navHover py-2 px-4" href="#projects">Projects</a>
                      </li>
-                     {/*
+
                      <li className="mr-3 py-2 lg:py-0">
-                        <a className="inline-block text-gray-50 no-underline navHover py-2 px-4" onClick={this.handleClick}>Contact Me</a>
+                        <a className="inline-block text-gray-50 no-underline navHover py-2 px-4" href="#contactMe">Contact Me</a>
                      </li>
-                     */}
+
                   </ul>
                </div>
             </div>

@@ -9,7 +9,7 @@ import Home from './components/Home';
 
 function App() {
   return (
-      <div id="bodyColor" className="tracking-wider tracking-normal">
+      <div id="bodyColor" className="tracking-normal">
         <Navbar/>
         <div>
           <Animation/>

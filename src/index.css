@@ -137,15 +137,15 @@ color:rgb(210, 46, 109);
 }
 
 .githubBtn2{
-  color:rgb(232, 34, 110);;
+  color:rgb(245, 41, 119);
 }
 
 .githubBtn2:hover{
-  color:rgb(148, 26, 73);
+  color:rgb(197, 33, 96);;
   cursor: pointer
 }
 .navHover:hover{
-  color:rgb(121, 177, 205);
+  color:rgb(148, 204, 233);
 }
 #navbar{
   background-color:#050813d2
@@ -165,7 +165,7 @@ border-color: rgb(121, 177, 205);
   color:rgb(148, 204, 233);
 }
 .githubBtn:hover{
-  color:rgba(90, 135, 174, 0.612);
+  color:rgb(77, 149, 185);
   cursor: pointer
 }
 
@@ -206,4 +206,20 @@ color:#6b778c;
 
 article p {
   padding-bottom:20px;
+}
+
+#contact_me_button{
+  background-color: rgb(214, 32, 102);
+
+}
+
+#contact_me_button:hover{
+  background-color: rgb(187, 31, 91);
+}
+
+#contactMe{
+  border-color: rgb(228, 36, 109);
+}
+#contactMe:hover{
+  border-color: rgb(168, 26, 81);
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import { FaTwitter, FaBehanceSquare, FaGithub, FaLinkedin, FaInstagramSquare, FaHome, FaUser, FaEnvelope} from 'react-icons/fa';
 import {GiSkills} from 'react-icons/gi'
 import {IoBriefcase} from 'react-icons/io5'
-import { motion, AnimatePresence } from 'framer-motion';
 
 
 export default function MobileNavBar(props) {
@@ -48,16 +47,16 @@ export default function MobileNavBar(props) {
                       <span className="ml-2 text-sm tracking-wide truncate">Projects</span>
                     </a>
                   </li>
-                  {/*
+
                   <li>
-                    <a href="/#" className="mobileMenu relative flex flex-row items-center h-11 focus:outline-none  text-gray-400 hover:text-white border-l-4 border-transparent pr-6">
+                    <a href="/#contactMe" onClick={props.linkClick} className="mobileMenu relative flex flex-row items-center h-11 focus:outline-none  text-gray-400 hover:text-white border-l-4 border-transparent pr-6">
                       <span className="inline-flex justify-center items-center ml-4">
                       <FaEnvelope/>
                       </span>
                       <span className="ml-2 text-sm tracking-wide truncate">Contact Me</span>
                     </a>
                   </li>
-                  */}
+
                   <li className="px-5">
                     <div className="flex flex-row items-center h-8">
                       <div className="text-sm font-light tracking-wide text-gray-600">MY SOCIAL NETWORKING</div>
