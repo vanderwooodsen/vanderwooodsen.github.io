@@ -15,14 +15,20 @@ class NavBar extends Component {
     }
 
     _onButtonClick(event) {
-      event.stopPropagation();
+      //event.stopPropagation();
       this.setState({
         showComponent: true,
       });
     }
 
     handleClickAway = (event) => {
-      event.stopPropagation();
+      //event.stopPropagation();
+		this.setState({
+         showComponent: false,
+      })
+	};
+
+   handleLinkClick = (event) => {
 		this.setState({
          showComponent: false,
       })
@@ -33,12 +39,12 @@ class NavBar extends Component {
    return (
       <div>
          <div>
-            <button id="menuBtn" onClick={this._onButtonClick} className=" z-500 overscroll-auto fixed lg:hidden flex px-2 py-1 ml-3 mt-3 md:px-4 md:py-3 md:ml-4 md:mt-4 text-white rounded font-bold hover:text-white hover:border-blue-400 appearance-none focus:outline-none">
+            <button id="menuBtn" onClick={this._onButtonClick} className={"z-500 overscroll-auto fixed lg:hidden flex px-2 py-1 ml-3 mt-3 md:px-4 md:py-3 md:ml-4 md:mt-4 text-white rounded font-bold hover:text-white hover:border-blue-400 appearance-none focus:outline-none " + (this.state.showComponent ? " hidden" : '')}>
                 <IoIosMenu className="text-2xl md:text-3xl" />
             </button>
          </div>
 
-         <MobileNavBar visible={this.state.showComponent} clickAway={this.handleClickAway}/>
+         <MobileNavBar visible={this.state.showComponent} clickAway={this.handleClickAway} linkClick={this.handleLinkClick}/>
 
          <nav id="navbar" className={"lg:fixed w-full z-10 top-0 "}>
             <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">

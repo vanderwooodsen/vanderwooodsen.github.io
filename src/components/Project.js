@@ -20,7 +20,7 @@ function Project(props){
           </div>
           <div className="timelineTXT col-span-8 p-6 rounded-xl shadow-md mb-5">
             <h3 className="font-medium text-lg mb-1">{props.title}</h3>
-            <p className="leading-tight text-justify w-full descOfProj font-semibold text-sm">
+            <p className=" w-full descOfProj font-semibold text-sm">
             {props.skills}
             </p>
 

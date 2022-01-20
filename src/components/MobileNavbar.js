@@ -9,18 +9,14 @@ export default function MobileNavBar(props) {
   console.log(props);
   let visible = props.visible;
             return (
-              <AnimatePresence>
-               {visible &&
-              <motion.div initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }} >
-            <motion.div id="navOverlay" className="backdrop-blur-3xl" onClick={props.clickAway}></motion.div>
+            <div className={visible ? '' : 'hidden'}>
+            <div id="navOverlay" className="backdrop-blur-3xl" onClick={props.clickAway}></div>
             <nav id="mobileNavBody" className="z-100	fixed flex flex-col top-0 left-0 w-64 h-full ">
               <div className="overflow-y-auto overflow-x-hidden flex-grow">
                 <ul className="flex flex-col py-4 space-y-1">
 
                   <li>
-                    <a href="#animation" onClick={props.clickAway} className="mobileMenu relative flex flex-row items-center h-11 focus:outline-none  text-gray-400 hover:text-white border-l-4 border-transparent  pr-6">
+                    <a href="/#animation" onClick={props.linkClick} className="mobileMenu relative flex flex-row items-center h-11 focus:outline-none  text-gray-400 hover:text-white border-l-4 border-transparent  pr-6">
                       <span className="inline-flex justify-center items-center ml-4">
                         <FaHome/>
                       </span>
@@ -28,7 +24,7 @@ export default function MobileNavBar(props) {
                     </a>
                   </li>
                   <li>
-                    <a href="#about_me" onClick={props.clickAway} className="mobileMenu relative flex flex-row items-center h-11 focus:outline-none  text-gray-400 hover:text-white border-l-4 border-transparent pr-6">
+                    <a href="/#about_me" onClick={props.linkClick} className="mobileMenu relative flex flex-row items-center h-11 focus:outline-none  text-gray-400 hover:text-white border-l-4 border-transparent pr-6">
                       <span className="inline-flex justify-center items-center ml-4">
                         <FaUser/>
                       </span>
@@ -36,7 +32,7 @@ export default function MobileNavBar(props) {
                     </a>
                   </li>
                   <li>
-                    <a href="#skills" onClick={props.clickAway} className="mobileMenu relative flex flex-row items-center h-11 focus:outline-none  text-gray-400 hover:text-white border-l-4 border-transparent pr-6">
+                    <a href="/#skills" onClick={props.linkClick} className="mobileMenu relative flex flex-row items-center h-11 focus:outline-none  text-gray-400 hover:text-white border-l-4 border-transparent pr-6">
                       <span className="inline-flex justify-center items-center ml-4">
                         <GiSkills/>
                       </span>
@@ -45,7 +41,7 @@ export default function MobileNavBar(props) {
                   </li>
 
                   <li>
-                    <a href="#projects" onClick={props.clickAway} className="mobileMenu relative flex flex-row items-center h-11 focus:outline-none  text-gray-400 hover:text-white border-l-4 border-transparent pr-6">
+                    <a href="/#projects" onClick={props.linkClick} className="mobileMenu relative flex flex-row items-center h-11 focus:outline-none  text-gray-400 hover:text-white border-l-4 border-transparent pr-6">
                       <span className="inline-flex justify-center items-center ml-4">
                       <IoBriefcase/>
                       </span>
@@ -54,7 +50,7 @@ export default function MobileNavBar(props) {
                   </li>
                   {/*
                   <li>
-                    <a href="#" className="mobileMenu relative flex flex-row items-center h-11 focus:outline-none  text-gray-400 hover:text-white border-l-4 border-transparent pr-6">
+                    <a href="/#" className="mobileMenu relative flex flex-row items-center h-11 focus:outline-none  text-gray-400 hover:text-white border-l-4 border-transparent pr-6">
                       <span className="inline-flex justify-center items-center ml-4">
                       <FaEnvelope/>
                       </span>
@@ -117,7 +113,6 @@ export default function MobileNavBar(props) {
               </div>
             </nav>
 
-            </motion.div> }
-            </AnimatePresence>
+            </div>
   );
 }

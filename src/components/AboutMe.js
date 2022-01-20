@@ -6,7 +6,7 @@ function AboutMe() {
     <div id="about_me" className="pt-8 pb-2 lg:py-10">
 
     <h1 id="aboutMe_header" className="md:text-3xl text-2xl text-center font-semibold col-span-full pb-8 text-bold">
-     About me a bit🤍
+     About me a bit 🤍
     </h1>
 
     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -25,12 +25,17 @@ function AboutMe() {
           with my work.
           </p>
         </article>
+
           <div className="mx-4 md:mx-0 flex flex-col lg:flex-row items-center md:pl-4 my-4">
             <img className="w-full md:w-auto md:px-0 md:h-64 lg:mr-8 mt-2 block" src="./certificate.png" alt="certificate"/>
+            {/*
             <a href="https://www.hackerrank.com/certificates/4e3a51b8fb46" className="mt-2 block" target="_blank" rel="noreferrer">
               <img id="certificate" className="w-full md:w-auto md:h-64" src="./hackerRank.png" alt="hackerRank"/>
             </a>
+             */
+        }
           </div>
+
         </div>
     </div>
     </div>

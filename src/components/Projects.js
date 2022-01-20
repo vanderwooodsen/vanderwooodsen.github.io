@@ -11,7 +11,7 @@ function  Projects(){
     <div>
       <div className="flex flex-col text-gray-50 ">
 
-        <Project title="UNIWEB-ACCESS" skills="REACT, REDUX, MATERIAL UI, CHART.JS, D3, PUPPETIER, POSTGRES SQL, CHAI" githubLink="https://github.com/uniwebaccess/Capstone" webLink="http://uniweb-access.herokuapp.com/" >
+        <Project title="UNIWEB-ACCESS" skills="REACT, REDUX, MATERIAL UI, CHART.JS, D3, PUPPETIER, POSTGRES SQL, CHAI, FIREBASE" githubLink="https://github.com/uniwebaccess/Capstone" webLink="http://uniweb-access.herokuapp.com/" >
         It is a tool that tests websites against standards of web accessibility according to the A11 Project checklist. It analyzes pages, gathers statistics and compares results to average scores. The user can explore visualizations that showcase how their site measures up and can learn more about some of the most important qualities of an accessible. The frontend was developed using Material UI components and I also implemented the checks themselves using browser automation with Puppeteer.
         </Project>
 
@@ -27,7 +27,8 @@ function  Projects(){
         This was a learning project developed by me and my cohort at The Grace Hopper Program, it is an online shop for house plants. Admin users have access to a management UI to add and remove inventory. Regular users can add items to their cart, use promo codes and checkout. Users can sign up for either a local account or use Google login via OAuth, in both cases they can manager their personal profile and shipping address. Cart contents for logged in users will be persisted between sessions. Frontend was styled using Bulma CSS and I setup the tests to be automatically executed on Travis CI and continuous deployment to Heroku.
         </Project>
 
-        <Project title="PORTFOLIO" skills="REACT, TAILWIND CSS, REACT-SPRING, PARTICLES.JS, FRAMER" githubLink="https://github.com/vanderwooodsen/vanderwooodsen.github.io"/>
+        <Project title="PORTFOLIO" skills="REACT, TAILWIND CSS, REACT-SPRING, PARTICLES.JS, FRAMER" githubLink="https://github.com/vanderwooodsen/vanderwooodsen.github.io">You are already here :)
+        </Project>
 
       </div>
     </div>

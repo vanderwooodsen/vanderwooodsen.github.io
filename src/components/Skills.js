@@ -28,7 +28,7 @@ function Skills() {
       <div id="skills" className="container grid grid-cols-12 pt-8 lg:pt-12">
       <div id="body_skills" className="border-box px-4 rounded-xl col-span-full md:col-span-8 md:col-start-3">
         <div className="body_skills flex justify-center">
-          <article className="md:text-3xl text-2xl skills pt-6 lg:pt-8 pb-6 lg:pb-6">Tehnical skills</article>
+          <article id="skills" className="md:text-3xl text-2xl skills pt-6 lg:pt-8 pb-6 lg:pb-6">Tehnical skills</article>
         </div>
 
         <div className="icons grid grid-cols-4 lg:grid-cols-6 lg:pb-8 text-5xl md:text-7xl leading-normal pb-5 select-none">
