@@ -35,11 +35,11 @@ class NavBar extends Component {
 	};
 
    handleLinkClick = (event) => {
-		this.setState({
+      this.body.classList.remove("overflow-hidden");
+
+      this.setState({
          showComponent: false,
       })
-
-      this.body.classList.remove("overflow-hidden");
 	};
 
 

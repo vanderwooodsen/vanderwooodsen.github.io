@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'react-medium-image-zoom/dist/styles.css';
+
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import '../node_modules/devicon/devicon.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');

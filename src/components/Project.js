@@ -1,7 +1,6 @@
 import React from 'react';
 import {FaGithub} from 'react-icons/fa';
 import { TiArrowForward } from "react-icons/ti";
-
 function Project(props){
 
   return(

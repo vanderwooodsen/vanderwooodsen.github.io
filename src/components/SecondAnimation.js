@@ -3,9 +3,6 @@ import TypeIt from "typeit-react";
 
 
 export default function SecondAnimation() {
-    // const codeRef = useCallback(node => {
-    //   type(node, 'Hello', 1000, 'Hello world!');
-    // }, []);
 
     return(
       <div className="absolute top-1/3 lg:ml-36 md:ml-24">
