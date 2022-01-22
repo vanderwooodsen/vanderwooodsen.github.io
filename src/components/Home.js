@@ -10,7 +10,6 @@ class Home extends Component{
   render(){
     return(
       <div id="home_page" className="flex flex-col items-center">
-                {/* <Animation/> */}
                 <AboutMe/>
                 <Skills/>
                 <Projects/>

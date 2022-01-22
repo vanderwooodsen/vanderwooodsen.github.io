@@ -5,7 +5,6 @@ import {IoBriefcase} from 'react-icons/io5'
 
 
 export default function MobileNavBar(props) {
-  console.log(props);
   let visible = props.visible;
             return (
             <div className={visible ? '' : 'hidden'}>
