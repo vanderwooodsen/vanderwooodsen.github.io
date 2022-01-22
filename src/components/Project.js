@@ -23,9 +23,9 @@ function Project(props){
             {props.skills}
             </p>
 
-              <p className="py-4 aboutProjects">
+              <div className="py-4 aboutProjects">
                {props.children}
-              </p>
+              </div>
 
 
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 
 function Skill(props){
@@ -7,6 +8,8 @@ function Skill(props){
   let id = props.id;
 
   let [clicked, setClicked] = useState(false);
+  const [ref, inView] = useInView()
+
 
   let animate = {
     scale: [1, 1.2,  1,],
@@ -32,7 +35,11 @@ function Skills() {
         </div>
 
         <div className="icons grid grid-cols-4 lg:grid-cols-6 lg:pb-8 text-5xl md:text-7xl leading-normal pb-5 select-none">
-          <Skill className=" devicon-react-original-wordmark colored"/>
+          <motion.div
+  whileInView={{ scale: [ 1, 1, 1.2, 1, 1,], rotate: [0, 6, -6, 12, -12, 12, -12, 6, -6, 0], }} transition={{ duration: 1 }}
+  viewport={{ once: true }}>
+            <Skill className=" devicon-react-original-wordmark colored"/>
+          </motion.div>
           <Skill className="devicon-javascript-plain colored"/>
           <Skill className="devicon-nodejs-plain-wordmark colored node"/>
           <Skill className=" devicon-jquery-plain-wordmark colored"/>
