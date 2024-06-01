@@ -18,30 +18,18 @@ function AboutMe() {
         <div className="content md:col-span-2 lg:col-span-3">
           <article id="aboutMe_body" className="item-body">
             <p className="indent text-l md:text-xl text-gray-800 px-4 md:pr-8 ">
-              I am Christine a full stack Javascript developer currently open
-              for new opportunities. I am mostly working with React, Redux and
-              Material UI but am also proficient in Express, PostgreSQL,
-              Bootstrap and others. I graduated from the Grace Hopper Program at
-              Fullstack Academy and was an intern at Meveto, a secure
-              authentication startup. You can learn more about my experience in
-              coding bootcamps{" "}
+            I am Christine, a full-stack JavaScript developer with extensive experience in React, TypeScript, Redux, and Material UI. I am also proficient in Express, REST, PostgreSQL, Bootstrap, and other technologies. I graduated from the Grace Hopper Program at Fullstack Academy and am currently employed at Visa company. Further details about my coding bootcamp experiences can be found {" "}
               <a
                 href="https://christine-tsiupa.medium.com/my-experiences-at-coding-bootcamps-1e48c1df890a"
                 target="_blank"
                 rel="noreferrer"
                 className="underline text-blue-900 hover:text-pink-600 hover:underline"
               >
-                right here.
+                here.
               </a>
             </p>
             <p className="indent text-l md:text-xl text-gray-800 px-4 md:pr-8">
-              In addition to web development, I am also interested in graphics
-              design and draw digitally. Before joining the Grace Hopper
-              bootcamp I also learned Python fundamentals and I believe learning
-              quickly on my feet is my strongest point. I work great in a team
-              and am eager to help my teammates or pair program to learn from
-              them. I love creating things and am oriented to deliver results
-              and make impact with my work.
+            In addition to my JavaScript expertise, I have foundational knowledge in Python and Java. I pride myself on my ability to learn quickly and adapt to new challenges. I thrive in collaborative environments, offering support to my teammates and engaging in pair programming to enhance my skills. I am dedicated to creating meaningful work and delivering impactful results.
             </p>
           </article>
 
