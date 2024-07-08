@@ -6,15 +6,14 @@ export default function ContactMe() {
     <motion.div
       whileTap={{ scale: 0.8 }}
       id="contactMe"
-      className="border-solid border-2 rounded-lg font-semibold  py-6 px-4 mb-60"
+      className="border-solid border-2 rounded-lg font-semibold py-6 px-4 mb-60"
     >
       <a
         id="contact_me_button"
-        className=" text-white hover:text-gray-200  text-lg font-semibold py-3 px-6 rounded-md shadow"
-        label="Write me an E-Mail"
+        className="text-white hover:text-gray-200 text-lg font-semibold py-3 px-6 rounded-md shadow"
         href="mailto:contactme@christis.page"
       >
-        Contact Meß
+        Contact Me
       </a>
     </motion.div>
   );
