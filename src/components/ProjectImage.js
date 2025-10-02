@@ -1,38 +1,38 @@
 import React from "react";
 import Zoom from "react-medium-image-zoom";
 
-function ProjectImage(props) {
-  let big = props.big;
-  let className = props.className ? props.className : "";
-  let small = props.small;
-  let width = props.width;
+const ProjectImage = ({ big, className = "", small, width }) => {
+  const largeSource = big || small;
 
   return (
     <div>
       <div className="md:hidden">
-        <a href={small}>
+        <a href={largeSource}>
           <img
             src={small}
             className={className}
             width={width}
-            alt="screenshot"
+            alt="Project screenshot"
+            loading="lazy"
           />
         </a>
       </div>
       <div className="hidden md:block">
         <Zoom>
           <picture>
-            <source media="(min-width: 700px)" srcSet={big} />
+            <source media="(min-width: 700px)" srcSet={largeSource} />
             <img
               srcSet={small}
               className={className}
               width={width}
-              alt="screenshot"/>
+              alt="Project screenshot"
+              loading="lazy"
+            />
           </picture>
         </Zoom>
       </div>
     </div>
   );
-}
+};
 
 export default ProjectImage;
