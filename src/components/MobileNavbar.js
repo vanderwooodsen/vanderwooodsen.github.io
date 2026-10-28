@@ -61,6 +61,18 @@ const MobileNavBar = ({ visible, clickAway, linkClick, drawerRef }) => {
               </li>
               <li>
                 <a
+                  href="#experience"
+                  onClick={linkClick}
+                  className="mobileMenu relative flex flex-row items-center h-11 text-gray-400 hover:text-white border-l-4 border-transparent pr-6"
+                >
+                  <span className="inline-flex justify-center items-center ml-4">
+                    <IoBriefcase />
+                  </span>
+                  <span className="ml-2 text-sm tracking-wide truncate">Work Experience</span>
+                </a>
+              </li>
+              <li>
+                <a
                   href="#skills-section"
                   onClick={linkClick}
                   className="mobileMenu relative flex flex-row items-center h-11 text-gray-400 hover:text-white border-l-4 border-transparent pr-6"

@@ -8,6 +8,9 @@ const SKILL_ANIMATION = {
 
 const SKILLS = [
   { label: "JavaScript", className: "devicon-javascript-plain colored" },
+  { label: "TypeScript", className: "devicon-typescript-plain colored" },
+  { label: "Java", className: "devicon-java-plain-wordmark colored" },
+  { label: "Cucumber — automation testing", className: "devicon-cucumber-plain-wordmark colored" },
   { label: "Node.js", className: "devicon-nodejs-plain-wordmark colored node" },
   { label: "jQuery", className: "devicon-jquery-plain-wordmark colored" },
   { label: "Express", className: "devicon-express-original-wordmark text-white" },

@@ -196,6 +196,14 @@ const NavBar = () => {
               <li className="mr-3 py-2 lg:py-0">
                 <a
                   className="inline-block text-gray-50 no-underline navHover py-2 px-4"
+                  href="#experience"
+                >
+                  Experience
+                </a>
+              </li>
+              <li className="mr-3 py-2 lg:py-0">
+                <a
+                  className="inline-block text-gray-50 no-underline navHover py-2 px-4"
                   href="#skills-section"
                 >
                   Skills

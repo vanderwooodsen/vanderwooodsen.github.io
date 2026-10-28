@@ -7,7 +7,7 @@ function AboutMe() {
         id="aboutMe_header"
         className="md:text-3xl text-2xl text-center font-semibold col-span-full pb-8 text-bold"
       >
-        About me a bit 🤍
+        About me
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -18,18 +18,31 @@ function AboutMe() {
         <div className="content md:col-span-2 lg:col-span-3">
           <article id="aboutMe_body" className="item-body">
             <p className="indent text-l md:text-xl text-gray-800 px-4 md:pr-8 ">
-            I am Christine, a full-stack JavaScript developer with extensive experience in React, TypeScript, Redux, and Material UI. I am also proficient in Express, REST, PostgreSQL, Bootstrap, and other technologies. I graduated from the Grace Hopper Program at Fullstack Academy and am currently employed at Visa company. Further details about my coding bootcamp experiences can be found {" "}
+              I’m Christine, a full-stack software developer with a background in
+              financial technology and AI applications. I enjoy turning complex
+              requirements into clear, usable software and working across the
+              frontend and backend to bring features together.
+            </p>
+            <p className="indent text-l md:text-xl text-gray-800 px-4 md:pr-8">
+              My core technologies include JavaScript, TypeScript, React, and
+              Redux, complemented by experience with Java, REST APIs, and
+              relational databases. I value readable code, thoughtful interfaces,
+              and automated testing, including Cucumber.
+            </p>
+            <p className="indent text-l md:text-xl text-gray-800 px-4 md:pr-8">
+              I bring a collaborative approach to development: sharing knowledge,
+              supporting teammates, and learning through pair programming. A
+              graduate of the Grace Hopper Program at Fullstack Academy, I’ve
+              continued to build on that foundation through professional practice
+              and new technical challenges. Read more about{" "}
               <a
                 href="https://christine-tsiupa.medium.com/my-experiences-at-coding-bootcamps-1e48c1df890a"
                 target="_blank"
                 rel="noreferrer"
                 className="underline text-blue-900 hover:text-pink-600 hover:underline"
               >
-                here.
+                how I started my software development career.
               </a>
-            </p>
-            <p className="indent text-l md:text-xl text-gray-800 px-4 md:pr-8">
-            In addition to my JavaScript expertise, I have foundational knowledge in Python and Java. I pride myself on my ability to learn quickly and adapt to new challenges. I thrive in collaborative environments, offering support to my teammates and engaging in pair programming to enhance my skills. I am dedicated to creating meaningful work and delivering impactful results.
             </p>
           </article>
 

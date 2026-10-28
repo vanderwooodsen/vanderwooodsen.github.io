@@ -65,7 +65,7 @@ test("selecting a mobile link closes the drawer", () => {
 
 test("skills have accessible names and reduced motion provides a static introduction", () => {
   const skills = container.querySelectorAll(".skill-button");
-  expect(skills.length).toBe(24);
+  expect(skills.length).toBe(27);
   skills.forEach(button => expect(button.getAttribute("aria-label")).toBeTruthy());
   expect(container.querySelector("h1").textContent).toContain("full stack developer");
   expect(container.querySelector("#tsparticles")).toBeNull();

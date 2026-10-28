@@ -227,7 +227,7 @@ article p {
 }
 
 /* Keep anchored sections clear of the fixed desktop navigation. */
-#about_me, #skills-section, #projects, #contactMe {
+#about_me, #experience, #skills-section, #projects, #contactMe {
   scroll-margin-top: 5rem;
 }
 
