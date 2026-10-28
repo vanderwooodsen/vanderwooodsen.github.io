@@ -3,16 +3,16 @@ import React from "react";
 function AboutMe() {
   return (
     <div id="about_me" className="pt-8 pb-2 lg:py-10">
-      <h1
+      <h2
         id="aboutMe_header"
         className="md:text-3xl text-2xl text-center font-semibold col-span-full pb-8 text-bold"
       >
         About me a bit 🤍
-      </h1>
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <div className="col-span-1 md:pl-8">
-          <img src="./myPhoto.jpg" className="w-full" alt="christine" />
+          <img src="./myPhoto.jpg" className="w-full" width="2275" height="4199" alt="Christine Tsiupa" loading="lazy" decoding="async" />
         </div>
 
         <div className="content md:col-span-2 lg:col-span-3">
@@ -37,7 +37,7 @@ function AboutMe() {
             <img
               className="w-full md:w-auto md:px-0 md:h-64 lg:mr-8 mt-2 block"
               src="./certificate.png"
-              alt="certificate"
+              width="1584" height="1224" alt="Grace Hopper Program graduation certificate" loading="lazy" decoding="async"
             />
             {/*
             <a href="https://www.hackerrank.com/certificates/4e3a51b8fb46" className="mt-2 block" target="_blank" rel="noreferrer">

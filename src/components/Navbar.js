@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import MobileNavBar from "./MobileNavbar";
 import {
   FaTwitter,
@@ -12,6 +12,9 @@ import { IoIosMenu } from "react-icons/io";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const menuButtonRef = useRef(null);
+  const drawerRef = useRef(null);
 
   useEffect(() => {
     const { body } = document;
@@ -32,15 +35,37 @@ const NavBar = () => {
       return undefined;
     }
 
+    const drawer = drawerRef.current;
+    const menuButton = menuButtonRef.current;
+    const focusableSelector = "button, a[href]";
+    drawer.querySelector(focusableSelector).focus();
     const handleKeyDown = (event) => {
+      if (event.key === "Tab") {
+        const elements = Array.from(drawer.querySelectorAll(focusableSelector));
+        const first = elements[0];
+        const last = elements[elements.length - 1];
+        if (event.shiftKey && (document.activeElement === first || !drawer.contains(document.activeElement))) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && (document.activeElement === last || !drawer.contains(document.activeElement))) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
       if (event.key === "Escape") {
         setIsMobileMenuOpen(false);
       }
     };
 
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) setIsMobileMenuOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
     document.addEventListener("keydown", handleKeyDown);
     return () => {
+      window.removeEventListener("resize", handleResize);
       document.removeEventListener("keydown", handleKeyDown);
+      menuButton?.focus();
     };
   }, [isMobileMenuOpen]);
 
@@ -61,9 +86,12 @@ const NavBar = () => {
       <div>
         <button
           id="menuBtn"
+          ref={menuButtonRef}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobileNavBody"
           onClick={openMobileMenu}
           className={
-            "z-500 overscroll-auto fixed lg:hidden flex px-2 py-1 ml-3 mt-3 md:px-4 md:py-3 md:ml-4 md:mt-4 text-white rounded font-bold hover:text-white hover:border-blue-400 appearance-none focus:outline-none" +
+            "overscroll-auto fixed lg:hidden flex px-2 py-1 ml-3 mt-3 md:px-4 md:py-3 md:ml-4 md:mt-4 text-white rounded font-bold hover:text-white hover:border-blue-400 appearance-none" +
             (isMobileMenuOpen ? " hidden" : "")
           }
           type="button"
@@ -74,6 +102,7 @@ const NavBar = () => {
       </div>
 
       <MobileNavBar
+        drawerRef={drawerRef}
         visible={isMobileMenuOpen}
         clickAway={closeMobileMenu}
         linkClick={closeMobileMenu}

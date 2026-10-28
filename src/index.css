@@ -176,7 +176,7 @@ border-color: rgb(121, 177, 205);
 }
 
 .aboutProjects{
-color:#6b778c;
+color:#c2cbd9;
 }
 
 
@@ -225,3 +225,17 @@ article p {
 #contactMe:hover{
   border-color: rgb(168, 26, 81);
 }
+
+/* Keep anchored sections clear of the fixed desktop navigation. */
+#about_me, #skills-section, #projects, #contactMe {
+  scroll-margin-top: 5rem;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #7dd3fc;
+  outline-offset: 4px;
+}
+.skill-button { background: transparent; border: 0; padding: 0.25rem; }
+#navOverlay { inset: 0; }
+
+.project-screenshot { max-width: 100%; height: auto; }

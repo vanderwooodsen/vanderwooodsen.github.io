@@ -1,8 +1,10 @@
 import React, { useMemo } from "react";
+import { useReducedMotion } from "framer-motion";
 import Particles from "react-tsparticles";
 import SecondAnimation from "./SecondAnimation";
 
 const Animation = () => {
+  const reducedMotion = useReducedMotion();
   const particlesOptions = useMemo(
     () => ({
       background: {
@@ -19,7 +21,8 @@ const Animation = () => {
           value: "#8fabc4",
         },
         number: {
-          max: 70,
+          value: 70,
+          limit: 70,
           density: {
             enable: true,
             area: 1000,
@@ -66,7 +69,7 @@ const Animation = () => {
 
   return (
     <div id="animation" className="h-screen w-full relative">
-      <Particles options={particlesOptions} />
+      {!reducedMotion && <div aria-hidden="true" className="absolute inset-0"><Particles options={particlesOptions} /></div>}
       <SecondAnimation />
     </div>
   );
