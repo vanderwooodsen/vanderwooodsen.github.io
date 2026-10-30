@@ -192,8 +192,12 @@ const Projects = () => {
   return (
     <div id="projects" className="container py-6 lg:py-8 lg:pt-16">
       <h2 className="md:text-3xl text-2xl text-center font-semibold mb-6 skills">
-        Projects
+        Selected projects
       </h2>
+      <p className="text-gray-300 text-center max-w-2xl mx-auto px-4 mb-8">
+        Personal and early-career projects built before my work at Visa,
+        covering accessibility, mobile development, and web applications.
+      </p>
 
       <div>
         <div className="flex flex-col text-gray-50">

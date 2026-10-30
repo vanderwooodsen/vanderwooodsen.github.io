@@ -68,7 +68,7 @@ const Animation = () => {
   );
 
   return (
-    <div id="animation" className="h-screen w-full relative">
+    <div id="animation" className="hero-section w-full relative">
       {!reducedMotion && <div aria-hidden="true" className="absolute inset-0"><Particles options={particlesOptions} /></div>}
       <SecondAnimation />
     </div>

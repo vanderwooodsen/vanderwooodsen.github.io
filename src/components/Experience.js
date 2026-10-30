@@ -52,13 +52,7 @@ function Experience() {
             cross-border payment flows, including person-to-person transfers,
             business payouts, and transfers between accounts.
           </p>
-          <p>
-            Its account and wallet services provide APIs for sending payouts,
-            querying payout status, and receiving notifications about status
-            changes and returns. Actual
-            fund availability depends on the receiving institution, account type,
-            region, and payment flow.
-          </p>
+
         </div>
         <h4 className="text-lg text-[#48BBDE] font-semibold mb-4">My contributions:</h4>
         <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
