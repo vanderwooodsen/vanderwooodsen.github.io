@@ -153,17 +153,6 @@ const NavBar = () => {
                 </li>
                 <li className="mr-3 py-2 lg:py-0">
                   <a
-                    className="inline-block text-gray-50 hover:text-blue-400 hover:underline py-2 px-4"
-                    target="_blank"
-                    rel="noreferrer"
-                    href="//twitter.com/christicodes"
-                    aria-label="Twitter"
-                  >
-                    <FaTwitter />
-                  </a>
-                </li>
-                <li className="mr-3 py-2 lg:py-0">
-                  <a
                     className="inline-block text-gray-50 hover:text-pink-500 hover:underline py-2 px-4"
                     target="_blank"
                     rel="noreferrer"
@@ -209,14 +198,14 @@ const NavBar = () => {
                   Skills
                 </a>
               </li>
-              <li className="mr-3 py-2 lg:py-0">
+              {/* <li className="mr-3 py-2 lg:py-0">
                 <a
                   className="inline-block text-gray-50 no-underline navHover py-2 px-4"
                   href="#projects"
                 >
                   Projects
                 </a>
-              </li>
+              </li> */}
 
               <li className="mr-3 py-2 lg:py-0">
                 <a

@@ -4,9 +4,9 @@ import ProjectImage from "./ProjectImage";
 
 const PROJECTS = [
   {
-    title: "UNIWEB-ACCESS",
+    title: "Uniweb Access",
     skills:
-      "REACT, REDUX, MATERIAL UI, CHART.JS, D3, PUPPETIER, POSTGRES SQL, CHAI, FIREBASE",
+      "React, Redux, Material UI, Chart.js, D3, Puppeteer, PostgreSQL, Chai, Firebase",
     githubLink: "https://github.com/uniwebaccess/Capstone",
     description: (
       <p>
@@ -20,7 +20,6 @@ const PROJECTS = [
         automation with Puppeteer.
       </p>
     ),
-    imagesWrapperClass: "pt-5 grid md:grid-cols-4 md:gap-2 grid-cols-2 gap-2",
     images: [
       {
         className: "w-64",
@@ -53,8 +52,8 @@ const PROJECTS = [
     ],
   },
   {
-    title: "TASTY LIST",
-    skills: "REACT NATIVE, REDUX, REACT NATIVE PAPER, EXPO",
+    title: "Tasty List",
+    skills: "React Native, Redux, React Native Paper, Expo",
     githubLink: "https://github.com/vanderwooodsen/React-Native-Recipes",
     description: (
       <p>
@@ -65,7 +64,6 @@ const PROJECTS = [
         Navigation for page transitions, and Redux to manage the state.
       </p>
     ),
-    imagesWrapperClass: "pt-5 flex flex-row items-center justify-between",
     images: [
       {
         className: "w-64",
@@ -98,8 +96,8 @@ const PROJECTS = [
     ],
   },
   {
-    title: "GITHUB ORGANIZATION VIEWER",
-    skills: "REACT, REDUX, TAILWIND",
+    title: "GitHub Organization Viewer",
+    skills: "React, Redux, Tailwind CSS",
     githubLink: "https://github.com/vanderwooodsen/Github-Organization-Viewer",
     webLink: "https://christis.page/Github-Organization-Viewer/",
     description: (
@@ -112,7 +110,6 @@ const PROJECTS = [
         CSS for styling the UI.
       </p>
     ),
-    imagesWrapperClass: "pt-5 grid md:grid-cols-4 md:gap-2 grid-cols-2 gap-2",
     images: [
       {
         small: "./githubScrinshots/github1sm.png",
@@ -129,9 +126,9 @@ const PROJECTS = [
     ],
   },
   {
-    title: "LEAFLY",
+    title: "Leafly",
     skills:
-      "REACT, REDUX, BULMA, CSS, EXPRESS, POSTGRE SQL, CHAI, HEROKU, TRAVIS CI",
+      "React, Redux, Bulma, CSS, Express, PostgreSQL, Chai, Heroku, Travis CI",
     githubLink: "https://github.com/Genius-Guava/Leafly",
     description: (
       <p>
@@ -147,7 +144,6 @@ const PROJECTS = [
         deployment to Heroku.
       </p>
     ),
-    imagesWrapperClass: "pt-5 grid md:grid-cols-4 md:gap-2 grid-cols-2 gap-2",
     images: [
       {
         className: "w-64",
@@ -180,8 +176,8 @@ const PROJECTS = [
     ],
   },
   {
-    title: "PORTFOLIO",
-    skills: "REACT, TAILWIND CSS, REACT-SPRING, PARTICLES.JS, FRAMER",
+    title: "Portfolio",
+    skills: "React, Tailwind CSS, Framer Motion, tsParticles",
     githubLink: "https://github.com/vanderwooodsen/vanderwooodsen.github.io",
     description: <p>You are already here :)</p>,
     images: [],
@@ -190,58 +186,51 @@ const PROJECTS = [
 
 const Projects = () => {
   return (
-    <div id="projects" className="container py-6 lg:py-8 lg:pt-16">
-      <h2 className="md:text-3xl text-2xl text-center font-semibold mb-6 skills">
-        Selected projects
-      </h2>
-      <p className="text-gray-300 text-center max-w-2xl mx-auto px-4 mb-8">
-        Personal and early-career projects built before my work at Visa,
-        covering accessibility, mobile development, and web applications.
-      </p>
-
-      <div>
-        <div className="flex flex-col text-gray-50">
-          {PROJECTS.map(
-            ({
-              title,
-              skills,
-              githubLink,
-              webLink,
-              description,
-              images = [],
-              imagesWrapperClass = "",
-            }) => (
-              <Project
-                key={title}
-                title={title}
-                skills={skills}
-                githubLink={githubLink}
-                webLink={webLink}
-              >
-                <div className="space-y-4">{description}</div>
-                {images.length > 0 && (
-                  <div className={imagesWrapperClass}>
-                    {images.map(
-                      ({ small, big, className, width, height }, index) => (
-                        <ProjectImage
-                          key={`${title}-${small}`}
-                          className={className}
-                          small={small}
-                          big={big}
-                          width={width}
-                          height={height}
-                          alt={`${title} — screenshot ${index + 1}`}
-                        />
-                      )
-                    )}
-                  </div>
-                )}
-              </Project>
-            )
-          )}
-        </div>
+    <section id="projects" aria-labelledby="projects-heading" className="portfolio-section">
+      <header className="section-heading">
+        <p className="section-eyebrow">Selected work</p>
+        <h2 id="projects-heading" className="section-title">
+          Selected projects
+        </h2>
+        <p className="section-description">
+          Personal and early-career projects built before my work at Visa,
+          covering accessibility, mobile development, and web applications.
+        </p>
+      </header>
+      <div className="project-list">
+        {PROJECTS.map(
+          ({ title, skills, githubLink, webLink, description, images = [] }, index) => (
+            <Project
+              key={title}
+              title={title}
+              skills={skills}
+              githubLink={githubLink}
+              webLink={webLink}
+              index={index}
+            >
+              <div className="project-description">{description}</div>
+              {images.length > 0 && (
+                <div className={`project-gallery${images.length === 2 ? " project-gallery--pair" : ""}`}>
+                  {images.map(
+                    ({ small, big, className, width, height }, imageIndex) => (
+                      <ProjectImage
+                        key={`${title}-${small}`}
+                        className={className}
+                        small={small}
+                        big={big}
+                        width={width}
+                        height={height}
+                        alt={`${title} — screenshot ${imageIndex + 1}`}
+                      />
+                    )
+                  )}
+                </div>
+              )}
+            </Project>
+          )
+        )}
       </div>
-    </div>
+    </section>
   );
 };
 

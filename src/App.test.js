@@ -71,6 +71,33 @@ test("skills have accessible names and reduced motion provides a static introduc
   expect(container.querySelector("#tsparticles")).toBeNull();
 });
 
+test("technology filters show the selected area and All restores the full toolkit", () => {
+  const filters = container.querySelector('[aria-label="Filter technologies"]');
+  const selectFilter = (label) => {
+    const button = Array.from(filters.querySelectorAll("button"))
+      .find(candidate => candidate.textContent === label);
+    act(() => { Simulate.click(button); });
+    expect(button.getAttribute("aria-pressed")).toBe("true");
+    expect(filters.querySelectorAll('[aria-pressed="true"]').length).toBe(1);
+  };
+
+  selectFilter("Frontend");
+  expect(container.querySelector('.skill-button[aria-label="React"]')).not.toBeNull();
+  expect(container.querySelector('.skill-button[aria-label="PostgreSQL"]')).toBeNull();
+
+  selectFilter("Backend");
+  expect(container.querySelector('.skill-button[aria-label="PostgreSQL"]')).not.toBeNull();
+  expect(container.querySelector('.skill-button[aria-label="React"]')).toBeNull();
+
+  selectFilter("Tools");
+  expect(container.querySelector('.skill-button[aria-label="GitHub"]')).not.toBeNull();
+  expect(container.querySelector('.skill-button[aria-label="Cucumber — automation testing"]')).not.toBeNull();
+  expect(container.querySelector('.skill-button[aria-label="PostgreSQL"]')).toBeNull();
+
+  selectFilter("All");
+  expect(container.querySelectorAll(".skill-button").length).toBe(27);
+});
+
 test("the close button dismisses navigation", () => {
   act(() => { Simulate.click(container.querySelector("#menuBtn")); });
   act(() => { Simulate.click(container.querySelector('#mobileNavBody button')); });

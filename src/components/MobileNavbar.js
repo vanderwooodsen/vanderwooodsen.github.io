@@ -83,7 +83,7 @@ const MobileNavBar = ({ visible, clickAway, linkClick, drawerRef }) => {
                   <span className="ml-2 text-sm tracking-wide truncate">Technical Skills</span>
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#projects"
                   onClick={linkClick}
@@ -94,7 +94,7 @@ const MobileNavBar = ({ visible, clickAway, linkClick, drawerRef }) => {
                   </span>
                   <span className="ml-2 text-sm tracking-wide truncate">Projects</span>
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="#contactMe"

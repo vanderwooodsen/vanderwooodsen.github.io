@@ -1,18 +1,23 @@
 import React from "react";
+import { FiActivity, FiArrowUpRight, FiCpu, FiLayout } from "react-icons/fi";
+import FocusOrbit from "./FocusOrbit";
 
 const CONTRIBUTIONS = [
   {
     title: "Visa Direct Portal",
+    Icon: FiLayout,
     description:
       "Contributed to the development of an enterprise web portal within Visa’s money movement business.",
   },
   {
     title: "AI agent",
+    Icon: FiCpu,
     description:
       "Built and integrated an AI agent into the Visa Direct Portal.",
   },
   {
     title: "AI analysis",
+    Icon: FiActivity,
     description:
       "Developed an AI analyzer for new products and disputes.",
   },
@@ -23,28 +28,29 @@ function Experience() {
     <section
       id="experience"
       aria-labelledby="experience-heading"
-      className="container px-4 py-8 lg:py-12 text-gray-50"
+      className="portfolio-section"
     >
-      <h2
-        id="experience-heading"
-        className="skills text-2xl md:text-3xl text-center font-semibold mb-6"
-      >
-        Work experience
-      </h2>
-      <article className="timelineTXT rounded-xl p-6 md:p-8 shadow-md">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
+      <header className="section-heading section-heading--illustrated">
+        <div>
+          <p className="section-eyebrow">Experience</p>
+          <h2 id="experience-heading" className="section-title">Work experience</h2>
+        </div>
+        <FocusOrbit />
+      </header>
+      <article className="surface-panel experience-card">
+        <header className="experience-header">
           <div>
-            <h3 className="text-2xl font-semibold">Visa</h3>
-            <p className="text-lg text-[#48BBDE]">Full-stack Software Developer</p>
+            <h3 className="experience-company">Visa</h3>
+            <p className="experience-role">Full-stack Software Developer</p>
           </div>
-          <p className="text-[#48BBDE]">
+          <p className="experience-period">
             <time dateTime="2022-05">May 2022</time>
             {" – "}
             <time dateTime="2026-10">October 2026</time>
           </p>
-        </div>
-        <div className="mb-8 text-gray-200 leading-relaxed">
-          <h4 className="text-lg text-gray-50 font-semibold mb-2">About Visa Direct</h4>
+        </header>
+        <div className="experience-overview">
+          <h4>About Visa Direct</h4>
           <p>
             Visa Direct is Visa’s global money movement platform, enabling
             businesses and financial institutions to send funds to eligible
@@ -52,34 +58,35 @@ function Experience() {
             cross-border payment flows, including person-to-person transfers,
             business payouts, and transfers between accounts.
           </p>
-
         </div>
-        <h4 className="text-lg text-[#48BBDE] font-semibold mb-4">My contributions:</h4>
-        <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {CONTRIBUTIONS.map(({ title, description }) => (
-            <li key={title}>
-              <h4 className="text-lg font-semibold mb-2">{title}</h4>
-              <p className="text-gray-200 leading-relaxed">{description}</p>
+        <h4 className="contributions-heading">My contributions</h4>
+        <ul className="contribution-grid">
+          {CONTRIBUTIONS.map(({ title, description, Icon }) => (
+            <li key={title} className="contribution-item">
+              <span className="contribution-icon" aria-hidden="true"><Icon /></span>
+              <h4>{title}</h4>
+              <p>{description}</p>
             </li>
           ))}
         </ul>
-        <a
-          href="https://www.visa.com/en-us/products/visa-direct"
-          target="_blank"
-          rel="noreferrer"
-          className="githubBtn inline-block mt-6 underline"
-        >
-          About Visa Direct
-        </a>
-        {" · "}
-        <a
-          href="https://developer.visa.com/capabilities/visa-direct-account-and-wallet"
-          target="_blank"
-          rel="noreferrer"
-          className="githubBtn inline-block mt-6 underline"
-        >
-          Account and wallet capabilities
-        </a>
+        <div className="experience-links">
+          <a
+            href="https://www.visa.com/en-us/products/visa-direct"
+            target="_blank"
+            rel="noreferrer"
+            className="text-link"
+          >
+            About Visa Direct <FiArrowUpRight aria-hidden="true" />
+          </a>
+          <a
+            href="https://developer.visa.com/capabilities/visa-direct-account-and-wallet"
+            target="_blank"
+            rel="noreferrer"
+            className="text-link"
+          >
+            Account and wallet capabilities <FiArrowUpRight aria-hidden="true" />
+          </a>
+        </div>
       </article>
     </section>
   );

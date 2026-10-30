@@ -19,6 +19,7 @@ export default function ContactMe() {
       >
         <FiMail aria-hidden="true" />
         Contact me
+        <FiArrowUpRight aria-hidden="true" />
       </a>
       <div className="contact-socials">
         <a
