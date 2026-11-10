@@ -1,5 +1,6 @@
 import React from "react";
 import { FiArrowUpRight, FiMail } from "react-icons/fi";
+import { CONTACT_LINKS } from "../data/navigation";
 
 export default function ContactMe() {
   return (
@@ -22,22 +23,17 @@ export default function ContactMe() {
         <FiArrowUpRight aria-hidden="true" />
       </a>
       <div className="contact-socials">
-        <a
-          className="contact-social-link"
-          href="https://www.linkedin.com/in/christidev/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          LinkedIn <FiArrowUpRight aria-hidden="true" />
-        </a>
-        <a
-          className="contact-social-link"
-          href="https://github.com/vanderwooodsen"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub <FiArrowUpRight aria-hidden="true" />
-        </a>
+        {CONTACT_LINKS.map(({ id, label, href }) => (
+          <a
+            key={id}
+            className="contact-social-link"
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {label} <FiArrowUpRight aria-hidden="true" />
+          </a>
+        ))}
       </div>
     </section>
   );

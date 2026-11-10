@@ -1,16 +1,7 @@
+@import "devicon/devicon.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'react-medium-image-zoom/dist/styles.css';
-@import '../node_modules/devicon/devicon.min.css';
-
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
-
 
 body {
   margin: 0;
@@ -32,14 +23,9 @@ code {
 
 #navOverlay {
   position: fixed;
-  width:100%;
-  height: 100%;
+  inset: 0;
   z-index: 400;
   background-color: rgba(0, 0, 0, 0.762);
-}
-
-#mobileNavBody {
-  z-index: 950;
 }
 
 
@@ -162,6 +148,7 @@ color:rgb(210, 46, 109);
   }
 }
 #mobileNavBody{
+  z-index: 950;
   background-color:#060a17f1;
   box-shadow: -6px -6px 8px rgb(0, 0, 0) ;
 }
@@ -172,17 +159,14 @@ border-color: rgb(121, 177, 205);
 }
 
 
-#projectsBtn{
-  padding-right: 68%;
-}
-
-
 #tsparticles{
   width: 100%;
   height: 100%;
 }
 
 #menuBtn{
+  min-width: 44px;
+  min-height: 44px;
   text-shadow: 2px 2px #227791;
   background-color:#060a17de;
   z-index: 850;
@@ -258,17 +242,6 @@ border-color: rgb(121, 177, 205);
   .hero-specialty__separator {
     display: none;
   }
-}
-
-#certificate:hover{
-  box-shadow: 0 0 6px #043157;
-}
-.indent {
-  text-indent:1em;
-}
-
-article p {
-  padding-bottom:20px;
 }
 
 .contact-section {
@@ -358,7 +331,6 @@ article p {
   .contact-social-link {
     transition: none;
   }
-
 }
 
 /* Keep anchored sections clear of the fixed desktop navigation. */
@@ -369,6 +341,22 @@ article p {
 a:focus-visible, button:focus-visible {
   outline: 3px solid #7dd3fc;
   outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 1000;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  color: #10284b;
+  background: #f5f7fc;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 .skill-button {
   display: flex;
@@ -409,8 +397,6 @@ a:focus-visible, button:focus-visible {
   line-height: 1.4;
   white-space: normal;
 }
-
-#navOverlay { inset: 0; }
 
 .project-screenshot { max-width: 100%; height: auto; }
 

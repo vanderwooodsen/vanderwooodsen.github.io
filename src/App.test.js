@@ -7,8 +7,10 @@ jest.mock("react-tsparticles", () => () => null);
 jest.mock("typeit-react", () => () => null);
 
 let container;
+const initialWidth = window.innerWidth;
 
 beforeEach(() => {
+  window.innerWidth = 390;
   window.IntersectionObserver = class {
     observe() {}
     unobserve() {}
@@ -27,6 +29,8 @@ beforeEach(() => {
 afterEach(() => {
   act(() => { ReactDOM.unmountComponentAtNode(container); });
   container.remove();
+  window.innerWidth = initialWidth;
+  document.body.classList.remove("overflow-hidden");
 });
 
 test("section links resolve to unique targets", () => {
@@ -36,12 +40,27 @@ test("section links resolve to unique targets", () => {
     expect(document.getElementById(link.hash.slice(1))).not.toBeNull();
   });
   expect(container.querySelector("#skills-section")).not.toBeNull();
+  expect(container.querySelector('a[href="#main-content"]')).not.toBeNull();
+  expect(container.querySelector("main").getAttribute("tabindex")).toBe("-1");
+});
+
+test("both menus link to the visible sections and omit the archived projects", () => {
+  const desktopLinks = Array.from(container.querySelectorAll('#navbar a[href^="#"]'))
+    .map(link => link.getAttribute("href"));
+  act(() => { Simulate.click(container.querySelector("#menuBtn")); });
+  const mobileLinks = Array.from(container.querySelectorAll('#mobileNavBody a[href^="#"]'))
+    .map(link => link.getAttribute("href"));
+  expect(mobileLinks).toEqual(desktopLinks);
+  expect(desktopLinks).not.toContain("#projects");
+  expect(container.querySelector("#projects")).toBeNull();
+  mobileLinks.forEach(href => expect(container.querySelector(href)).not.toBeNull());
 });
 
 test("navigation moves focus, traps Tab, and restores focus on Escape", () => {
   const trigger = container.querySelector("#menuBtn");
   act(() => { Simulate.click(trigger); });
   expect(trigger.getAttribute("aria-expanded")).toBe("true");
+  expect(container.querySelector("main").hasAttribute("inert")).toBe(true);
   const drawer = container.querySelector("#mobileNavBody");
   const close = drawer.querySelector("button");
   const links = drawer.querySelectorAll("a");
@@ -54,6 +73,28 @@ test("navigation moves focus, traps Tab, and restores focus on Escape", () => {
   act(() => { document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", bubbles: true })); });
   expect(container.querySelector("#mobileNavBody")).toBeNull();
   expect(document.activeElement).toBe(trigger);
+  expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+  expect(container.querySelector("main").hasAttribute("inert")).toBe(false);
+});
+
+test("closing the menu preserves pre-existing scroll and focus restrictions", () => {
+  const main = container.querySelector("main");
+  document.body.classList.add("overflow-hidden");
+  main.setAttribute("inert", "");
+  act(() => { Simulate.click(container.querySelector("#menuBtn")); });
+  act(() => { Simulate.click(container.querySelector('#mobileNavBody button')); });
+  expect(document.body.classList.contains("overflow-hidden")).toBe(true);
+  expect(main.hasAttribute("inert")).toBe(true);
+});
+
+test("the backdrop and external profile links dismiss the mobile menu", () => {
+  const open = () => act(() => { Simulate.click(container.querySelector("#menuBtn")); });
+  open();
+  act(() => { Simulate.click(container.querySelector("#navOverlay")); });
+  expect(container.querySelector("#mobileNavBody")).toBeNull();
+  open();
+  act(() => { Simulate.click(container.querySelector('#mobileNavBody a[href="https://github.com/vanderwooodsen"]')); });
+  expect(container.querySelector("#mobileNavBody")).toBeNull();
   expect(document.body.classList.contains("overflow-hidden")).toBe(false);
 });
 
@@ -111,5 +152,7 @@ test("resizing to desktop closes the mobile drawer and unlocks scrolling", () =>
   act(() => { window.dispatchEvent(new Event("resize")); });
   expect(container.querySelector("#mobileNavBody")).toBeNull();
   expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+  expect(container.querySelector("main").hasAttribute("inert")).toBe(false);
+  expect(document.activeElement).toBe(container.querySelector('#navbar a[href="#animation"]'));
   window.innerWidth = previousWidth;
 });
